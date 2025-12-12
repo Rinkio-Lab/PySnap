@@ -1,0 +1,22 @@
+{
+    "paths": {
+        "temp_code_dir": "%TEMP%/cn.linko.PySnap/TempCodes",
+        "history_dir": "%TEMP%/cn.linko.PySnap/History",
+        "log_dir": "%TEMP%/cn.linko.PySnap/Logs"
+    },
+    "execution": {
+        "default_timeout": 5,
+        "default_timeout_enabled": true,
+        "python_interpreter": "python",
+        "blocked_imports": []
+    },
+    "history": {
+        "default_max_history": 100,
+        "save_history_enabled": true,
+        "compress_history": false,
+        "history_filename_format": "{yyyy}{mm}{dd}.json"
+    },
+    "ui": {
+        "language": "zh-CN"
+    }
+}
