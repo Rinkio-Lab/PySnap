@@ -128,6 +128,12 @@ async def get_static(name: str):
         if not p.exists():
             raise HTTPException(status_code=404, detail="File not found")
         return FileResponse(p, filename=name)
+    # 如果以字体文件结尾，则返回字体文件
+    elif name.endswith((".woff2", ".woff", ".ttf", ".eot")):
+        p = Path(__file__).parent / "static" / "fonts" / name
+        if not p.exists():
+            raise HTTPException(status_code=404, detail="File not found")
+        return FileResponse(p, filename=name)
     # 否则返回 404
     raise HTTPException(status_code=404, detail="Not found")
 

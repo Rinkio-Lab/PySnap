@@ -1,5 +1,20 @@
+html,
+:root,
+* {
+    font-family: "MapleMonoCN", system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif !important;
+}
+
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
     margin: 16px;
     background: var(--bg);
     color: var(--text);
@@ -55,7 +70,7 @@ body[data-theme="dark"] {
     display: flex;
     gap: 16px;
     margin-top: 12px;
-    height: calc(100vh-120px);
+    height: calc(100vh - 120px) !important;
 }
 
 #editor {
@@ -87,7 +102,12 @@ body[data-theme="dark"] {
     flex-wrap: wrap;
 }
 
+.config {
+    margin-top: 20px;
+}
+
 .glass-btn {
+    min-height: 32px;
     padding: 6px 12px;
     border-radius: 12px;
     border: 1px solid var(--glass-border);
@@ -106,12 +126,24 @@ body[data-theme="dark"] {
 }
 
 .timeout-input {
-    width: 70px;
+    min-height: 32px;
+    cursor: text;
+    width: 100px;
     padding: 3px 6px;
     border-radius: 8px;
     background: rgba(255, 255, 255, .08);
     border: 1px solid var(--glass-border);
     color: var(--text);
+}
+
+.timeoutToggle {
+    min-height: 32px;
+    padding: 3px 6px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid var(--glass-border);
+    color: var(--text);
+    cursor: pointer;
 }
 
 .glass-sub {
